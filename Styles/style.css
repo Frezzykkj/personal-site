@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #0004ff;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -133,14 +133,14 @@ body{
 }
 
 .social-icons a{
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 20%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     margin: 0 3px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .toggle-container{
@@ -161,9 +161,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #1900ff;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #07015b, #07015b);
     color: #fff;
     position: relative;
     left: -100%;
