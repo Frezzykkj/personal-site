@@ -1,3 +1,14 @@
+<?php
+
+    if(isset($_POST['submit']))
+    {
+        print_r($_POST['nome']);
+        print_r($_POST['email']);
+        print_r($_POST['password']);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +26,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form action="formulario.php" method="POST">
                 <h1>Criar conta</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
