@@ -25,7 +25,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="formulario.php" method="POST">
+            <form>
                 <h1>Criar conta</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
