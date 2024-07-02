@@ -1,17 +1,20 @@
 <?php
     $dbhost = 'localhost';
     $dbUsername = 'root';
-    $dbpassword = '12345';
+    $dbpassword = '';
     $dbname = 'personal-site';
 
-    $conexao = new mysqli($dbhost,$dbUsername,$dbpassword,$dbname)
-
-    if($conexao->connect_errno)
+    $conexao = new mysqli($dbhost,$dbUsername,$dbpassword,$dbname);
+   
+    if ($conexao->connect_error)
     {
         echo "erro";
     }
+
     else
     {
-        echo "conexão efetuada com sucesso"
-    }   
+        echo "Conexão efetuada com sucesso";
+    }
+
 ?>
+
