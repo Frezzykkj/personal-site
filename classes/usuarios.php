@@ -48,11 +48,10 @@
            $sql->bindValue(":e", $email);
            $sql->bindValue(":s", md5($senha));
            $sql->execute();
-        
-           if($sql->rowcount() > 0)
+           
+           if($sql->rowCount() > 0)
            {
                $dado = $sql->fetch();
-               session_start();
                $_SESSION['id_usuario'] = $dado['id_usuario'];
                return true;
            }
