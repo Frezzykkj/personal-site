@@ -1,3 +1,10 @@
+<?php
+
+    require_once './classes/usuarios.php';
+    $u = new usuario;
+
+?>
+
 <html lang="pt-br"> 
 
 <head>
@@ -20,6 +27,42 @@
         <p>Ainda não tem uma conta?<a href="./cadastrar.php"><strong> Criar uma conta</strong></a></p>
     </form>
     </div>
-</body>
 
+<?php
+
+if(isset($_POST['email']))
+{
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+
+    if(!empty($email) && !empty($senha))
+    {
+
+        $u->conectar("personal_site","localhost","root","");
+        if($u->msgErro == "")
+        {
+            if($u->logar($email,$senha))
+            {
+                header("location: areaprivada.php");
+            }
+            else
+            {
+                echo "Email ou senha incorretos!";
+            }
+        }
+        else
+        {
+            echo "ERRO: ".$u->msgErro;
+        }
+        
+    }
+    else
+    {
+        echo "preencha todos os campos!";
+    }   
+            
+}
+
+?>
+</body>
 </html>
